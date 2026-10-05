@@ -1,0 +1,6 @@
+{
+  "name": "BGMI 4.6 FPS Booster & Feature Hub",
+  "description": "Comprehensive BGMI 4.6 update feature breakdown, 90/120 FPS graphics optimizer, sensitivity calculator, and real-time touch latency benchmark.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

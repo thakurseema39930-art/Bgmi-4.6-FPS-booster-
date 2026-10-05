@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="70%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#1e293b" stroke-width="6"/>
+  <!-- Circular Tachometer Arc -->
+  <path d="M 128 350 A 160 160 0 1 1 384 350" fill="none" stroke="#1e293b" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 128 350 A 160 160 0 1 1 350 180" fill="none" stroke="url(#ringGrad)" stroke-width="24" stroke-linecap="round"/>
+  <!-- Center Turbo Bolt -->
+  <path d="M 284 120 L 192 272 L 264 272 L 228 392 L 340 236 L 272 236 Z" fill="url(#boltGrad)"/>
+  <!-- Ticks -->
+  <line x1="256" y1="96" x2="256" y2="114" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+  <line x1="142" y1="210" x2="158" y2="218" stroke="#10b981" stroke-width="6" stroke-linecap="round"/>
+  <line x1="370" y1="210" x2="354" y2="218" stroke="#06b6d4" stroke-width="6" stroke-linecap="round"/>
+</svg>
