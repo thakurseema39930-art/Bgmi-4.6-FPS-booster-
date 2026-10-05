@@ -404,14 +404,14 @@ export const BenchmarkCanvas: React.FC = () => {
 
     let tier = 'Standard 60Hz Competent';
     let ratingColor = 'text-blue-400';
-    if (avgFps >= 220 && p99 >= 160) {
-      tier = 'Esports God-Tier (240Hz+ Ready)';
+    if (avgFps >= 160 && p99 >= 140) {
+      tier = '165 FPS Ultra God-Tier (ROG / RedMagic Ready)';
       ratingColor = 'text-emerald-400';
-    } else if (avgFps >= 135 && p99 >= 100) {
-      tier = 'Competitive Tournament (144Hz Ready)';
+    } else if (avgFps >= 115 && p99 >= 95) {
+      tier = 'Tournament 120 FPS Competent';
       ratingColor = 'text-cyan-400';
     } else if (avgFps >= 75) {
-      tier = 'Smooth High Refresh';
+      tier = 'Smooth 90 FPS Refresh';
       ratingColor = 'text-emerald-300';
     } else if (avgFps < 45) {
       tier = 'System Throttling / Optimization Needed';
@@ -657,8 +657,8 @@ export const BenchmarkCanvas: React.FC = () => {
                   {targetFpsCap === 0 ? 'Unlimited' : `${targetFpsCap} FPS`}
                 </span>
               </div>
-              <div className="grid grid-cols-4 gap-1.5">
-                {[0, 60, 144, 240].map((cap) => (
+              <div className="grid grid-cols-5 gap-1">
+                {[0, 60, 90, 120, 165].map((cap) => (
                   <button
                     key={cap}
                     onClick={() => setTargetFpsCap(cap)}

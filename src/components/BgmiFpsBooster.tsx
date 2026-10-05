@@ -5,7 +5,7 @@ interface DeviceTierConfig {
   id: string;
   name: string;
   chipsets: string;
-  targetFps: '60 FPS (Extreme)' | '90 FPS (Ultra Extreme)' | '120 FPS (Native Flagship)';
+  targetFps: '60 FPS (Extreme)' | '90 FPS (Ultra Extreme)' | '120 FPS (Native Flagship)' | '165 FPS (Ultra Esports Overclock)';
   inGameGraphics: string;
   style: string;
   antiAliasing: string;
@@ -75,6 +75,26 @@ const DEVICE_TIERS: DeviceTierConfig[] = [
       'Turn OFF Low Power Mode on iOS (Low Power Mode caps iPhone screens to 60Hz!)',
       'Enable Guided Access on iPhone to lock out accidental notification gesture stutters',
       'Lock Touch Sampling Rate to 240Hz / 360Hz in gaming control panel',
+    ],
+  },
+  {
+    id: 'ultra-165',
+    name: '165Hz Ultra Gaming Tier (ROG Phone 7/8/9, RedMagic 8/9/10, Legion)',
+    chipsets: 'Snapdragon 8 Gen 2/3/Elite Leading Version, Dimensity 9300+ Gaming Edition',
+    targetFps: '165 FPS (Ultra Esports Overclock)',
+    inGameGraphics: 'Smooth',
+    style: 'Colorful (Maximum Visibility)',
+    antiAliasing: 'Disabled (Essential for 6.06ms Frame Sync)',
+    shadows: 'Disabled',
+    autoAdjust: 'Disabled',
+    brightness: '140%',
+    audioQuality: 'Ultra (Direct DAC Hardware Acceleration)',
+    thermalTip: 'Attach official AeroActive Cooler or magnetic semiconductor refrigeration peltier fan.',
+    devOptions: [
+      'Lock screen display to fixed 165.0 Hz via Display & Brightness Settings',
+      'Turn on "Touch Overdrive / Game Touch Sampling Rate" to 720Hz / 960Hz',
+      'Execute: adb shell settings put system peak_refresh_rate 165.0',
+      'Activate X-Mode / Diablo Mode in Armoury Crate / Game Space',
     ],
   },
 ];
@@ -179,7 +199,7 @@ pause`;
         {/* Device Tier Selector Tabs */}
         <div className="pt-2 border-t border-slate-800/80">
           <div className="text-xs text-slate-400 font-medium mb-2">Select Your Hardware Tier:</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {DEVICE_TIERS.map((tier) => (
               <button
                 key={tier.id}

@@ -16,12 +16,13 @@ export const TopBar: React.FC<TopBarProps> = ({
   boosted,
 }) => {
   const navItems = [
+    { id: 'gamebooster', label: 'Game Booster' },
+    { id: 'suzuki', label: 'Suzuki Bike' },
     { id: 'features', label: 'Features 4.6' },
-    { id: 'booster', label: 'FPS Booster' },
-    { id: 'benchmark', label: 'Stress Benchmark' },
+    { id: 'booster', label: '165 FPS Setup' },
+    { id: 'benchmark', label: 'Benchmark' },
     { id: 'sensitivity', label: 'Sensitivity' },
     { id: 'reflex', label: 'Touch Latency' },
-    { id: 'ping', label: 'Ping Stabilizer' },
   ];
 
   return (
@@ -67,7 +68,7 @@ export const TopBar: React.FC<TopBarProps> = ({
             }`}
           >
             <Zap className={`w-3.5 h-3.5 ${boosted ? 'text-emerald-400' : 'text-amber-400'}`} />
-            <span>{boosted ? 'Boosted 120 FPS' : 'Quick Boost'}</span>
+            <span>{boosted ? 'Boosted 165 FPS' : 'Quick Boost'}</span>
           </button>
 
           <PWAInstallButton />

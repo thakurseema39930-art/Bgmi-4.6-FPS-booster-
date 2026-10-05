@@ -1,7 +1,7 @@
 export interface BgmiFeature {
   id: string;
   title: string;
-  category: 'Themed Mode' | '120 FPS & Graphics' | 'Weapons & Balance' | 'Vehicles' | 'Tactical & Audio' | 'Royale Pass & Events';
+  category: 'Themed Mode' | '120 FPS & Graphics' | '165 FPS Ultra' | 'Weapons & Balance' | 'Vehicles' | 'Tactical & Audio' | 'Royale Pass & Events';
   badge: string;
   summary: string;
   details: string[];
@@ -10,6 +10,37 @@ export interface BgmiFeature {
 }
 
 export const BGMI_4_6_FEATURES: BgmiFeature[] = [
+  {
+    id: 'fps-165-ultra',
+    title: 'Ultra 165 FPS Engine & 6.06ms Frame Latency Lock',
+    category: '165 FPS Ultra',
+    badge: '165Hz Display Mode',
+    summary: 'Unlocked ultra-high refresh rate support for dedicated 165Hz gaming smartphones and external esports monitors, delivering an unprecedented 6.06ms frame latency pipeline.',
+    details: [
+      'Official compatibility for 165Hz flagships: ROG Phone 7/8/9 Ultimate, RedMagic 8/9/10S Pro, Legion Phone, and high-refresh emulators.',
+      'Frame delivery budget dropped from 8.33ms (120 FPS) down to 6.06ms per frame, yielding maximum visual fluidity.',
+      'Supercharged 720Hz/960Hz Touch Sampling Synchronization: Instantaneous flick-aim registering without frame pacing hitches.',
+      'Bypass thermal governor profiles when active cooling fans or Peltier phone coolers are detected.',
+    ],
+    proTips: 'For 165Hz, set your device screen refresh rate to fixed 165Hz in phone Display Settings, disable Dynamic LTPO switching, and select Smooth + 165 FPS.',
+    impactScore: 10,
+  },
+  {
+    id: 'suzuki-collaboration',
+    title: 'Official Suzuki Superbike Collaboration (Hayabusa & Katana)',
+    category: 'Vehicles',
+    badge: 'Suzuki Collaboration',
+    summary: 'The iconic high-performance Suzuki superbike partnership brings the legendary Hayabusa GSX1300R and Suzuki Katana into BGMI with high-revving acoustics and precision lean handling.',
+    details: [
+      'Suzuki Hayabusa GSX1300R Skin: Replaces standard 2-seater motorcycle with aerodynamic aerodynamic bodywork and dual twin-exhaust.',
+      'Suzuki Katana Racing Variant: Aggressive naked streetfighter aesthetics with high-torque low-end acceleration.',
+      'High-Speed Aerodynamic Downforce: Reduced mid-air flipping when jumping hills at 150+ km/h, preventing accidental squad knockouts.',
+      'Authentic 1340cc 4-Cylinder Exhaust Note: High-fidelity engine audio recorded directly from real-life Suzuki superbikes with pitch-accurate Doppler effect.',
+      'Nitrous Burner Boost Effect: Blue flame exhaust sparks when holding the shift/boost button on straight Erangel highways.',
+    ],
+    proTips: 'The Suzuki Hayabusa has a 12% narrower collision hitbox than standard bikes, making it much harder for sniper squads on bridge towers to headshot you at full throttle.',
+    impactScore: 10,
+  },
   {
     id: 'fps-120-expansion',
     title: 'Native 120 FPS Mode & Refresh Rate Engine',
